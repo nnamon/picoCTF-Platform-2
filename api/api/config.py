@@ -37,17 +37,17 @@ testing_mongo_port = 27017
 
 """ CTF SETTINGS """
 
-enable_teachers = True
+enable_teachers = False
 enable_feedback = True
 
-competition_name = "picoCTF"
+competition_name = "X-CTF Quals 2016"
 competition_urls = ["127.0.0.1:8080"]
 
 # Max users on any given team
-api.team.max_team_users = 5
+api.team.max_team_users = 4
 
 # Teams to display on scoreboard graph
-api.stats.top_teams = 5
+api.stats.top_teams = 10
 
 # start and end times!
 class EST(datetime.tzinfo):
@@ -60,15 +60,15 @@ class EST(datetime.tzinfo):
     def dst(self, dt):
         return datetime.timedelta(0)
 
-start_time = datetime.datetime(2000, 10, 27, 12, 13, 0, tzinfo=EST(4))
-end_time = datetime.datetime(2055, 11, 7, 23, 59, 59, tzinfo=EST(5))
+start_time = datetime.datetime(2016, 4, 9, 0, 0, 0, tzinfo=EST(-8))
+end_time = datetime.datetime(2016, 4, 10, 23, 59, 59, tzinfo=EST(-8))
 
 # Root directory of all problem graders
 api.problem.grader_base_path = "./graders"
 
 """ ACHIEVEMENTS """
 
-enable_achievements = True
+enable_achievements = False
 
 api.achievement.processor_base_path = "./achievements"
 

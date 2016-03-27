@@ -23,16 +23,16 @@ npm install -g coffee-script
 npm install -g react-tools
 npm install -g jsxhint
 
-pip3 install -r /home/vagrant/api/requirements.txt
+pip3 install -r /vagrant/picoCTF-Platform-2/api/requirements.txt
 
 # Jekyll
 gem install jekyll -v 2.5.3
 
 # Configure Environment
-echo 'PATH=$PATH:/home/vagrant/scripts' >> /etc/profile
+echo 'PATH=$PATH:/vagrant/picoCTF-Platform-2/scripts' >> /etc/profile
 
 # Configure Nginx
-cp /vagrant/config/ctf.nginx /etc/nginx/sites-enabled/ctf
+cp /vagrant/picoCTF-Platform-2/config/ctf.nginx /etc/nginx/sites-enabled/ctf
 rm /etc/nginx/sites-enabled/default
 mkdir -p /srv/http/ctf
 service nginx restart

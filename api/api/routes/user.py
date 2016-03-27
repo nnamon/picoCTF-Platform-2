@@ -20,7 +20,7 @@ def get_shell_account_hook():
         return WebSuccess(data=api.team.get_shell_account())
     return WebError(data="Shell is not available.")
 
-@blueprint.route('/create', methods=['POST'])
+#@blueprint.route('/create', methods=['POST'])
 @api_wrapper
 def create_user_hook():
     new_uid = api.user.create_user_request(api.common.flat_multi(request.form))
@@ -43,7 +43,7 @@ def disable_account_hook():
     api.user.disable_account_request(api.common.flat_multi(request.form), check_current=True)
     return WebSuccess("Your have successfully disabled your account!")
 
-@blueprint.route('/reset_password', methods=['GET'])
+#@blueprint.route('/reset_password', methods=['GET'])
 @api_wrapper
 def reset_password_hook():
     username = request.args.get("username", None)

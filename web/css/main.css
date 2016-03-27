@@ -285,3 +285,8 @@ img.logo-landscape {
     text-align:center;
     z-index: 2;
 }
+
+.navbar {
+    background-color:#4F5254;
+}
+
