@@ -37,5 +37,6 @@ $PICOPATH/api/api_manager.py database clear cache
 #Start picoCTF API
 echo "Starting the picoCTF API"
 tmux kill-session -t picoapi 2> /dev/null
+killall gunicorn
 #tmux new-session -s picoapi -d "cd $PICOPATH/api && python3 run.py"
 cd $PICOPATH/api && ./gunicorn_start.sh &
