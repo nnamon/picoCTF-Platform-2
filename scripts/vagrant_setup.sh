@@ -1,5 +1,6 @@
 #!/bin/bash
 
+PICOPATH=/vagrant/picoCTF-Platform-2
 # Updates
 apt-get -y update
 apt-get -y upgrade
@@ -23,16 +24,16 @@ npm install -g coffee-script
 npm install -g react-tools
 npm install -g jsxhint
 
-pip3 install -r /vagrant/picoCTF-Platform-2/api/requirements.txt
+pip3 install -r $PICOPATH/api/requirements.txt
 
 # Jekyll
 gem install jekyll -v 2.5.3
 
 # Configure Environment
-echo 'PATH=$PATH:/vagrant/picoCTF-Platform-2/scripts' >> /etc/profile
+echo 'PATH=$PATH:$PICOPATH/scripts' >> /etc/profile
 
 # Configure Nginx
-cp /vagrant/picoCTF-Platform-2/config/ctf.nginx /etc/nginx/sites-enabled/ctf
+cp $PICOPATH/config/ctf.nginx /etc/nginx/sites-enabled/ctf
 rm /etc/nginx/sites-enabled/default
 mkdir -p /srv/http/ctf
 service nginx restart
