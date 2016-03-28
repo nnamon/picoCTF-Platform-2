@@ -1,6 +1,6 @@
 #!/bin/bash
 
-PICOPATH=/vagrant/picoCTF-Platform-2
+PICOPATH=/pico
 # Updates
 apt-get -y update
 apt-get -y upgrade
