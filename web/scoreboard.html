@@ -2,19 +2,19 @@
 layout: default
 title: Scoreboard
 post_scripts:
- - js/progression_graphs.js
- - js/scoreboard.js
+- js/progression_graphs.js
+- js/scoreboard.js
 startup_functions:
 ---
 
 <script type="text/template" id="scoreboard-teamscore-template">
-  <div class="pull-right">
+<div class="pull-right">
     <h3>Score: <strong><%= teamscore%></strong></h3>
   </div>
 </script>
 
 <script type="text/template" id="scoreboard-tabs-template">
-  <ul class="nav nav-tabs">
+<ul class="nav nav-tabs">
     <li class="active"><a data-toggle="tab" href="#public">Public</a></li>
     <% if(data.groups.length > 0) { %>
       <% _.each(data.groups, function(group) { %>
@@ -36,7 +36,7 @@ startup_functions:
 </script>
 
 <script type="text/template" id="scoreboard-template">
-  <% if(!($.isEmptyObject(scoreboard))) { %>
+<% if(!($.isEmptyObject(scoreboard))) { %>
     <table class="table" class="scoreboard-table">
       <thead>
         <tr>
@@ -61,10 +61,34 @@ startup_functions:
     <pre>
       <p class="text-center">No teams have scored any points yet.</p>
     </pre>
-  <% } %>
+    <% } %>
 </script>
 
 <div class="container">
-  <div id="scoreboard-teamscore"></div>
-  <div id="scoreboard-tabs"></div>
+    <div class="row">
+        <div class="panel-group">
+            <div class="alert" style="background-color: #EFEFEF">
+                <div class="panel-heading" style="padding: 2px 2px 5px 2px">
+                    <p align="center" class="panel-title">
+                        <a data-toggle="collapse"
+                           href="#collapse1">
+                            Seen our awesome sponsors yet? No? Click me!
+                        </a>
+                    </p>
+                </div>
+                <div id="collapse1"
+                     class="panel-collapse
+                     collapse">
+                    <div
+                     class="panel-body">
+                        <div class="col-md-8 col-md-offset-2">
+                            {% include sponsors.html %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="scoreboard-teamscore"></div>
+    <div id="scoreboard-tabs"></div>
 </div>

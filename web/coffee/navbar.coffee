@@ -1,6 +1,7 @@
 apiOffline =
   About: "/about"
   News: "/news"
+  Sponsors: "/sponsors"
 
 teacherLoggedIn =
   Problems: "/problems"
@@ -9,6 +10,7 @@ teacherLoggedIn =
   About:
     Rules: "/about"
     News: "/news"
+    Sponsors: "/sponsors"
   Account:
     Manage: "/account"
     Logout: "#"
@@ -29,6 +31,7 @@ userLoggedIn =
   About:
     Rules: "/about"
     News: "/news"
+    Sponsors: "/sponsors"
   Account:
     Manage: "/account"
     Logout: "#"
@@ -40,16 +43,20 @@ userLoggedInNoCompetition =
   About:
     Rules: "/about"
     News: "/news"
+    Sponsors: "/sponsors"
   Account:
     Manage: "/account"
     Logout: "#"
 
 
 userNotLoggedIn =
-  Rules: "/about"
+  About:
+    Rules: "/about"
+    News: "/news"
+    Sponsors: "/sponsors"
   News: "/news"
   Scoreboard: "/scoreboard"
-  Login: "/login"
+  Login: "/"
 
 loadNavbar = (renderNavbarLinks, renderNestedNavbarLinks) ->
 
