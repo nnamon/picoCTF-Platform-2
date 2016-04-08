@@ -56,7 +56,7 @@ userNotLoggedIn =
     Sponsors: "/sponsors"
   News: "/news"
   Scoreboard: "/scoreboard"
-  Login: "/"
+  Login: "/login"
 
 loadNavbar = (renderNavbarLinks, renderNestedNavbarLinks) ->
 

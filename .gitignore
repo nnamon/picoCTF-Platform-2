@@ -8,4 +8,5 @@ web/_site/
 web/_includes/analytics.html
 api/graders/autogentest/instances/*
 api/graders/*
+problem_static/*
 *~
