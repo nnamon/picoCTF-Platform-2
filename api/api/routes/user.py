@@ -20,7 +20,7 @@ def get_shell_account_hook():
         return WebSuccess(data=api.team.get_shell_account())
     return WebError(data="Shell is not available.")
 
-#@blueprint.route('/create', methods=['POST'])
+@blueprint.route('/create', methods=['POST'])
 @api_wrapper
 def create_user_hook():
     new_uid = api.user.create_user_request(api.common.flat_multi(request.form))
@@ -51,7 +51,7 @@ def reset_password_hook():
     api.utilities.request_password_reset(username)
     return WebSuccess("A password reset link has been sent to the email address provided during registration.")
 
-@blueprint.route('/confirm_password_reset', methods=['POST'])
+#@blueprint.route('/confirm_password_reset', methods=['POST'])
 @api_wrapper
 def confirm_password_reset_hook():
     password = request.form.get("new-password")

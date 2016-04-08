@@ -1,55 +1,41 @@
 ---
 layout: default
-title: Login
+title: Homepage
+title_label: hide
 post_scripts:
-- js/login.js
+- /js/registration.js
 startup_functions:
-- redirectIfLoggedIn()
 ---
 
 <div class="container">
     <div class="row">
-        <div class="col-md-6">
-            <section id="login">
-                <form role="form" id="login-form">
-                    <div class="form-group">
-                        <label for="login-username">Username</label>
-                        <div>
-                            <input name="username" id="login-username" placeholder="Username" type="text" class="form-control">
+        <div class="panel-group">
+            <div class="alert" style="background-color: #EFEFEF">
+                <div class="panel-heading" style="padding: 2px 2px 5px 2px">
+                    <p align="center" class="panel-title">
+                        <a data-toggle="collapse"
+                           href="#collapse1">
+                            Seen our awesome sponsors yet? No? Click me!
+                        </a>
+                    </p>
+                </div>
+                <div id="collapse1"
+                     class="panel-collapse
+                     collapse">
+                    <div
+                     class="panel-body">
+                        <div class="col-md-8 col-md-offset-2">
+                            {% include sponsors.html %}
                         </div>
                     </div>
-
-                    <div class="form-group">
-                        <label for="login-password">Password</label>
-                        <div>
-                            <input name="password" id="login-password" placeholder="Password" type="password" class="form-control">
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <div class="col-md-3 button-column">
-                            <button id="login-button" class="btn btn-primary" type="submit"> Login </button>
-                        </div>
-                        <div class="col-md-9 login-changer">
-                            <a href="#" class="toggle-login-ui">Did you forget your password?</a>
-                        </div>
-                    </div>
-                </form>
-
-                <form role="form" id="password-reset-form">
-                    <div class="form-group">
-                        Please contact an admin over IRC or email to reset your
-                        password.
-                        <br />
-                        <div class="col-md-9 login-changer">
-                            <a href="#" class="toggle-login-ui">Ready to try again?</a>
-                        </div>
-                </form>
-            </section>
+                </div>
+            </div>
         </div>
-        <div class="col-md-6">
-            {% include sponsors.html %}
+    </div>
+    <div class="row">
+        <div id="registration">
+	  <h2>Register Now!</h2>
+            {% include registration-index.html %}
         </div>
     </div>
 </div>
-
