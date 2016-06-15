@@ -60,7 +60,9 @@ class EST(datetime.tzinfo):
     def dst(self, dt):
         return datetime.timedelta(0)
 
-start_time = datetime.datetime(2016, 4, 9, 0, 0, 0, tzinfo=EST(-8))
+#start_time = datetime.datetime(2016, 4, 9, 0, 0, 0, tzinfo=EST(-8))
+start_time = datetime.datetime(2014, 4, 9, 0, 0, 0, tzinfo=EST(-8))
+
 end_time = datetime.datetime(2016, 4, 10, 23, 59, 59, tzinfo=EST(-8))
 
 # Root directory of all problem graders
