@@ -41,7 +41,7 @@ enable_teachers = False
 enable_feedback = True
 
 competition_name = "X-CTF Finals 2016"
-competition_urls = ["127.0.0.1:8080"]
+competition_urls = ["127.0.0.1:8080", "xctf.spro.ink"]
 
 # Max users on any given team
 api.team.max_team_users = 4
@@ -60,10 +60,10 @@ class EST(datetime.tzinfo):
     def dst(self, dt):
         return datetime.timedelta(0)
 
-#start_time = datetime.datetime(2016, 4, 9, 0, 0, 0, tzinfo=EST(-8))
-start_time = datetime.datetime(2014, 4, 9, 0, 0, 0, tzinfo=EST(-8))
+start_time = datetime.datetime(2017, 4, 9, 0, 0, 0, tzinfo=EST(-8))
+#start_time = datetime.datetime(2014, 4, 9, 0, 0, 0, tzinfo=EST(-8))
 
-end_time = datetime.datetime(2016, 4, 10, 23, 59, 59, tzinfo=EST(-8))
+end_time = datetime.datetime(2017, 4, 10, 23, 59, 59, tzinfo=EST(-8))
 
 # Root directory of all problem graders
 api.problem.grader_base_path = "./graders"
