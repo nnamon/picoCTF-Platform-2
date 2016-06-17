@@ -26,7 +26,6 @@ teacherLoggedInNoCompetition =
 userLoggedIn =
   Problems: "/problems"
   Team: "/team"
-  Chat: "/chat"
   Scoreboard: "/scoreboard"
   About:
     Rules: "/about"
@@ -38,7 +37,6 @@ userLoggedIn =
 
 userLoggedInNoCompetition =
   Team: "/team"
-  Chat: "/chat"
   Scoreboard: "/scoreboard"
   About:
     Rules: "/about"
