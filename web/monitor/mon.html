@@ -1,0 +1,33 @@
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+</head>
+<body>
+<script>
+var audioElement;
+var pids = [];
+
+$(document).ready(function() {
+		audioElement = document.createElement('audio');
+		audioElement.setAttribute('src', 'firstblood.mp3');
+		//audioElement.load()
+
+		$.get();
+		});
+
+function step() {
+	$.getJSON( "https://xctf.spro.ink/score.json", function( data ) {
+			for (var i in data) {
+				if (!pids.includes(data[i]["pid"])) {
+					console.log(data[i]["team_name"] + " has first blooded " + data[i]["problem_name"]);
+					pids.push(data[i]["pid"]);
+					audioElement.play();		
+				}
+			}
+			});	
+}
+setInterval(step, 4000);
+</script>
+</body>
+</html>
+
